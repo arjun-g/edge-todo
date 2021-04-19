@@ -86,7 +86,7 @@ async function handleScheduled(event){
       const todos = (await TODO.get(key, { type: "json" })) || [];
       const incomplete = todos.filter(todo => !todo.completed).length;
       const { phonenumber } = (await TODO.get(key.replace(":todos", ":settings"), { type: "json" })) || {};
-      if(phonenumber){
+      if(phonenumber && incomplete){
         try{
           await sendSMS(phonenumber, `You have ${incomplete} tasks pending`);
         }
