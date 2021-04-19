@@ -1,0 +1,12 @@
+name = "edge-todo"
+type = "webpack"
+account_id = "<account_id>>"
+workers_dev = true
+kv_namespaces = [
+    { binding = "TODO", id = "<kv_id>", preview_id = "<kv_preview_id>" }
+]
+vars = { ACCOUNT_SID = "<twilio_account_sid>", FROM_NUMBER = "<twilio_from_number>", AUTH_TOKEN = "<twilio_auth_token>" }
+[site]
+bucket = "./build"
+[triggers]
+crons = ["0 */12 * * *"]

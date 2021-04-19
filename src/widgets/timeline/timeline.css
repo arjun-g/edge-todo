@@ -1,0 +1,95 @@
+.timeline{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.time {
+    width: 100px;
+    font-size: 28px;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.groupedtime{
+    border-left: 2px solid #f0f0f0;
+    padding-left: 12px;
+    padding-bottom: 32px;
+}
+
+.timelineitem{
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: var(--background-color);
+    color: var(--color);
+    border: var(--border);
+    display: flex;
+}
+
+.timelineitem .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: var(--color);
+    border-color: var(--color);
+}
+
+.timelineitem.completed .ant-checkbox-wrapper span:nth-child(2){
+    text-decoration: line-through;
+}
+
+.timelineitem .ant-checkbox-wrapper{
+    flex: 1 1 100%;
+}
+
+.timelineitem .ant-checkbox-wrapper span:nth-child(2){
+    color: var(--color);
+    white-space: nowrap;
+}
+
+.timelineitem .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner{
+    border-color: var(--color);
+}
+
+.blue{
+    --background-color: #ECF2FE;
+    --color: #5F91E8;
+    --border: 2px solid #3273E2;
+}
+
+.green{
+    --background-color: #E8F9F1;
+    --color: #5FD088;
+    --border: 2px solid #3EC66E;
+}
+
+.purple{
+    --background-color: #F2EFFF;
+    --color: #9182FC;
+    --border: 2px solid #7B69FB;
+}
+
+.orange{
+    --background-color: #F6F1EB;
+    --color: #F7A52D;
+    --border: 2px solid #F69C15;
+}
+
+.gray{
+    --background-color: #F2F3F0;
+    --color: #A8A8A8;
+    --border: 2px solid #A8A8A8;
+}
+
+.deletetodo{
+    cursor: pointer;
+}
+
+.itemcontent{
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+
+.duetime{
+    font-weight: 400;
+    font-size: 13px;
+}

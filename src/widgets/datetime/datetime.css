@@ -1,0 +1,8 @@
+.ant-input-group-addon{
+    padding: 0;
+}
+
+.clockbutton{
+    border-left: none !important;
+    border-radius: none !important;
+}
