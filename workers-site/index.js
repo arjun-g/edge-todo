@@ -4,8 +4,6 @@ import { site } from "cfw-express-static";
 import { v4 } from "uuid";
 import { sendSMS } from "./sms";
 
-// import { sendSMS } from "./sms";
-
 const app = express();
 
 app.use(async (req, res) => {
