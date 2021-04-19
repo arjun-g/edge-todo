@@ -37,11 +37,12 @@ function App() {
               <Input
                 value={phoneNumber}
                 suffix={
-                  <Tooltip title="The phonenumber will be auto deleted in 12hrs from the time you have save this.">
+                  <Tooltip title="The phonenumber will be auto deleted in 12hrs from the time you save this.">
                     <InfoCircleTwoTone />
                   </Tooltip>
                 }
                 onChange={e => setPhoneNumber(e.target.value)}
+                placeholder="Phone number here"
               />
               <div style={{ height: "8px" }} />
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -65,6 +66,7 @@ function App() {
               onChange={(e) => {
                 setContent(e.target.value);
               }}
+              placeholder="What do you want to do ?"
             />
           </div>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>

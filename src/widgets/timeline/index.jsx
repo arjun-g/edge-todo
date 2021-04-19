@@ -16,8 +16,10 @@ export function Timeline({
 }){
     window.colorIndex = 0;
     const groupedTodos = useMemo(() => {
+        const orderedTodos = [...todos.filter(todo => !todo.dueOn), ...todos.filter(todo => todo.dueOn).sort((a, b) => a.dueOn.isAfter(b.dueOn) ? 1 : -1)];
+
         const groups = {};
-        todos.forEach(todo => {
+        orderedTodos.forEach(todo => {
             let groupId = null;
             if(todo.dueOn){
                 groupId = todo.dueOn.format("MMM DD");
